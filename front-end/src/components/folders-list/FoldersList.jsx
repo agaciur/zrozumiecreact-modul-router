@@ -1,52 +1,48 @@
-import styles from "./FoldersList.module.css";
+import styles from "./FoldersList.module.css"
+import { Folder } from "../folder/Folder"
+import { Title } from "../title/Title"
+import { TopBar } from "../top-bar/TopBar"
+import { AddNewButton } from "../add-new-button/AddNewButton"
+import { NavLink, useLoaderData } from "react-router-dom"
 
-import { useState } from "react";
-import { Folder } from "../folder/Folder";
-import { Title } from "../title/Title";
-import { TopBar } from "../top-bar/TopBar";
-import { AddNewButton } from "../add-new-button/AddNewButton";
-
-const Folders = ({ children }) => (
-    <div className={styles["folders-column"]}>{children}</div>
-);
+const Folders = ({ children }) => <div className={styles["folders-column"]}>{children}</div>
 const UserCreatedFolders = ({ children }) => (
-    <div role="list" className={styles["folders-list"]}>
-        {children}
-    </div>
-);
+  <div
+    role='list'
+    className={styles["folders-list"]}>
+    {children}
+  </div>
+)
 
 export function FoldersList() {
-    const [folders] = useState([
-        {
-            name: "Listy",
-            id: 1,
-        },
-        {
-            name: "Przemyślenia",
-            id: 2,
-        },
-    ]);
+  const folders = useLoaderData()
 
-    return (
-        <Folders>
-            <TopBar>
-                <input
-                    className={styles["new-folder-input"]}
-                    type="text"
-                    placeholder="Nazwa folderu"
-                />
-                <AddNewButton type="submit">+</AddNewButton>
-            </TopBar>
+  return (
+    <Folders>
+      <TopBar>
+        <input
+          className={styles["new-folder-input"]}
+          type='text'
+          placeholder='Nazwa folderu'
+        />
+        <AddNewButton type='submit'>+</AddNewButton>
+      </TopBar>
 
-            <Title>Foldery</Title>
-            <UserCreatedFolders>
-                {folders.map((folder, idx) => (
-                    <Folder key={idx}>{folder.name}</Folder>
-                ))}
-            </UserCreatedFolders>
-            {/* <Folder icon="archive">Archiwum</Folder> */}
-        </Folders>
-    );
+      <Title>Foldery</Title>
+      <UserCreatedFolders>
+        {folders.map((folder, idx) => (
+          <NavLink
+            key={idx}
+            to={`notes/${folder.id}`}>
+            {({ isActive }) => {
+              return <Folder active={isActive}>{folder.name}</Folder>
+            }}
+          </NavLink>
+        ))}
+      </UserCreatedFolders>
+      {/* <Folder icon="archive">Archiwum</Folder> */}
+    </Folders>
+  )
 }
 
-export default FoldersList;
+export default FoldersList
