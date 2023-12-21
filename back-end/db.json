@@ -1,47 +1,190 @@
 {
-    "folders": [
-        {
-            "name": "Listy",
-            "id": 1
-        },
-        {
-            "name": "Przemyślenia",
-            "id": 2
-        }
-    ],
-    "archive": {
-        "folderId": 3
+  "folders": [
+    {
+      "name": "Listy",
+      "id": 1
     },
-    "notes": [
-        {
-            "id": 5,
-            "folderId": 2,
-            "title": "Albert Einstein",
-            "body": "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning."
-        },
-        {
-            "id": 7,
-            "title": "Sun Tzu",
-            "folderId": 2,
-            "body": "Osiągnąć sto zwycięstw w stu bitwach nie jest szczytem umiejętności. Szczytem umiejętności jest pokonanie przeciwnika bez walki."
-        },
-        {
-            "title": "Lista zakupów na wakacje",
-            "body": "\nKup ubezpieczenie,\nKup bilety,\nZarezerwuj hotel\n",
-            "folderId": 1,
-            "id": 8
-        },
-        {
-            "title": "Lista zakupów",
-            "body": "\n1. Herbata,\n2. Ziemianki,\n 3. Woda gazowana\n",
-            "folderId": 1,
-            "id": 10
-        },
-        {
-            "title": "Kurs React - TODO",
-            "body": "\n1. Napisać odcinki\n2. Nargrać odcinki",
-            "folderId": 1,
-            "id": 15
-        }
-    ]
+    {
+      "name": "Przemyślenia",
+      "id": 2
+    },
+    {
+      "name": "nowy",
+      "id": 3
+    },
+    {
+      "name": "Dodaj ",
+      "id": 4
+    }
+  ],
+  "archive": {
+    "folderId": 3
+  },
+  "notes": [
+    {
+      "id": 5,
+      "folderId": 2,
+      "title": "Albert Einstein",
+      "body": "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning."
+    },
+    {
+      "id": 7,
+      "title": "Sun Tzu",
+      "folderId": 2,
+      "body": "Osiągnąć sto zwycięstw w stu bitwach nie jest szczytem umiejętności. Szczytem umiejętności jest pokonanie przeciwnika bez walki."
+    },
+    {
+      "title": "Lista zakupów na wakacje",
+      "body": "\nKup ubezpieczenie,\nKup bilety,\nZarezerwuj hotel\n",
+      "folderId": 1,
+      "id": 8
+    },
+    {
+      "title": "Lista zakupów",
+      "body": "\n1. Herbata,\n2. Ziemianki,\n 3. Woda gazowana\n",
+      "folderId": 1,
+      "id": 10
+    },
+    {
+      "title": "Kurs React - TODO",
+      "body": "\n1. Napisać odcinki\n2. Nargrać odcinki",
+      "folderId": 1,
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 22
+    },
+    {
+      "id": 23
+    },
+    {
+      "id": 24
+    },
+    {
+      "id": 25
+    },
+    {
+      "id": 26
+    },
+    {
+      "id": 27
+    },
+    {
+      "id": 28
+    },
+    {
+      "id": 29
+    },
+    {
+      "id": 30
+    },
+    {
+      "id": 31
+    },
+    {
+      "id": 32
+    },
+    {
+      "id": 33
+    },
+    {
+      "id": 34
+    },
+    {
+      "id": 35
+    },
+    {
+      "id": 36
+    },
+    {
+      "id": 37
+    },
+    {
+      "id": 38
+    },
+    {
+      "id": 39
+    },
+    {
+      "id": 40
+    },
+    {
+      "id": 41
+    },
+    {
+      "id": 42
+    },
+    {
+      "id": 43
+    },
+    {
+      "id": 44
+    },
+    {
+      "id": 45
+    },
+    {
+      "id": 46
+    },
+    {
+      "id": 47
+    },
+    {
+      "id": 48
+    },
+    {
+      "id": 49
+    },
+    {
+      "id": 50
+    },
+    {
+      "id": 51
+    },
+    {
+      "id": 52
+    },
+    {
+      "id": 53
+    },
+    {
+      "id": 54
+    },
+    {
+      "id": 55
+    },
+    {
+      "id": 56
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Treść notatki",
+      "folderId": 4,
+      "id": 57
+    },
+    {
+      "title": "cześć",
+      "body": "nowa",
+      "folderId": 4,
+      "id": 58
+    }
+  ]
 }
