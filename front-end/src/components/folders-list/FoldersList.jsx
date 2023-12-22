@@ -3,7 +3,7 @@ import { Folder } from "../folder/Folder"
 import { Title } from "../title/Title"
 import { TopBar } from "../top-bar/TopBar"
 import { AddNewButton } from "../add-new-button/AddNewButton"
-import { NavLink, useLoaderData, Form } from "react-router-dom"
+import { NavLink, useLoaderData, Form, redirect } from "react-router-dom"
 
 const Folders = ({ children }) => <div className={styles["folders-column"]}>{children}</div>
 const UserCreatedFolders = ({ children }) => (
@@ -26,6 +26,10 @@ export async function createFolder(args) {
       "Content-type": "application/json",
     },
   })
+    .then(res => res.json())
+    .then(newFolder => {
+      return redirect(`/notes/${newFolder.id}`)
+    })
 }
 
 export function FoldersList() {

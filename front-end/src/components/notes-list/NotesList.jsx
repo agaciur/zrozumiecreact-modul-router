@@ -4,7 +4,7 @@ import { AddNewButton } from "../add-new-button/AddNewButton"
 import { TopBar } from "../top-bar/TopBar"
 import { ShortNote } from "../short-note/ShortNote"
 import { Note } from "../note/Note"
-import { useLoaderData, Outlet, NavLink, Form } from "react-router-dom"
+import { useLoaderData, Outlet, NavLink, Form, redirect } from "react-router-dom"
 
 const NotesContainer = ({ children }) => <div className={styles["notes-container"]}>{children}</div>
 
@@ -28,6 +28,10 @@ export function createNote({ params }) {
       folderId: Number(params.folderId),
     }),
   })
+    .then(res => res.json())
+    .then(newNote => {
+      return redirect(`/notes/${newNote.folderId}/note/${newNote.id}`)
+    })
 }
 
 export function NotesList() {
