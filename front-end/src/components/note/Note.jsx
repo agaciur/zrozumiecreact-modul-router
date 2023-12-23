@@ -2,6 +2,8 @@ import RemoveIcon from "../../assets/remove.svg"
 import styles from "./Note.module.css"
 import { TopBar } from "../top-bar/TopBar"
 import { useLoaderData, Form, useSubmit, redirect } from "react-router-dom"
+import { useCallback } from "react"
+import { debounce } from "../../utils/debounce"
 
 const NoteEditor = ({ children }) => <div className={styles["note-editor"]}>{children}</div>
 
@@ -32,6 +34,14 @@ export async function deleteNote({ params }) {
 export function Note() {
   const note = useLoaderData()
   const submit = useSubmit()
+
+  const onChangeCallback = useCallback(
+    debounce(e => {
+      const form = e.target.closest("form")
+      submit(form, { method: "PATCH" })
+    }, 300)
+  )
+
   return (
     <div className={styles.container}>
       <TopBar>
@@ -49,7 +59,7 @@ export function Note() {
 
       <Form
         method='PATCH'
-        onChange={e => submit(e.currentTarget)}>
+        onChange={onChangeCallback}>
         <NoteEditor key={note.id}>
           <input
             type='text'

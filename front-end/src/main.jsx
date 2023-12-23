@@ -27,6 +27,11 @@ const router = createBrowserRouter([
       return fetch("http://localhost:3000/folders ")
     },
     children: [
+      // {
+      //   path: "/archive",
+      //   element: <NotesList />,
+      // },
+
       {
         path: "/notes/:folderId",
         element: <NotesList />,
