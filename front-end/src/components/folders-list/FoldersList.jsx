@@ -63,7 +63,9 @@ export function FoldersList() {
           </NavLink>
         ))}
       </UserCreatedFolders>
-      {/* <Folder icon="archive">Archiwum</Folder> */}
+      <NavLink to='archive'>
+        <Folder>Archiwum</Folder>
+      </NavLink>
     </Folders>
   )
 }
