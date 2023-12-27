@@ -4,7 +4,7 @@ import { AddNewButton } from "../add-new-button/AddNewButton"
 import { TopBar } from "../top-bar/TopBar"
 import { ShortNote } from "../short-note/ShortNote"
 import { Note } from "../note/Note"
-import { useLoaderData, Outlet, NavLink, Form, redirect } from "react-router-dom"
+import { useLoaderData, Outlet, NavLink, Form, useLocation } from "react-router-dom"
 
 const NotesContainer = ({ children }) => <div className={styles["notes-container"]}>{children}</div>
 
@@ -15,7 +15,6 @@ const Notes = ({ children }) => (
     {children}
   </div>
 )
-
 export function createNote({ params }) {
   return fetch("http://localhost:3000/notes", {
     method: "POST",
@@ -28,14 +27,16 @@ export function createNote({ params }) {
       folderId: Number(params.folderId),
     }),
   })
-    .then(res => res.json())
-    .then(newNote => {
-      return redirect(`/notes/${newNote.folderId}/note/${newNote.id}`)
-    })
+  // .then(res => res.json())
+  // .then(newNote => {
+  //   return redirect(`/notes/${newNote.folderId}/note/${newNote.id}`)
+  // })
 }
 
 export function NotesList() {
   const notes = useLoaderData()
+  const location = useLocation()
+  console.log(notes)
 
   return (
     <NotesContainer>
@@ -47,10 +48,10 @@ export function NotesList() {
           </Form>
         </TopBar>
 
-        {notes.map((note, idx) => (
+        {notes.map(note => (
           <NavLink
-            key={idx}
-            to={`/notes/${note.folderId}/note/${note.id}`}>
+            key={note.id}
+            to={location.pathname === "/archive" ? `/archive/${note.id}` : `/notes/${note.folderId}/note/${note.id}`}>
             {({ isActive }) => {
               return (
                 <ShortNote

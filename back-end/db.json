@@ -9,25 +9,103 @@
       "id": 2
     },
     {
-      "name": "noey folder",
+      "name": "",
       "id": 3
     },
     {
-      "name": "nowy",
+      "name": "nowy folder",
       "id": 4
     }
   ],
   "archive": {
-    "title": "AGata",
-    "body": "Agata",
+    "title": "Nowa notatka",
+    "body": "Tutaj wpisz treść swojej notatki.",
     "folderId": "1"
   },
   "notes": [
     {
+      "id": 5,
+      "folderId": 2,
+      "title": "Albert Einstein",
+      "body": "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning."
+    },
+    {
+      "title": "Lista zakupów na wakacje coś",
+      "body": "\nKup ubezpieczenie,\nKup bilety,\nZarezerwuj hotel\n",
+      "folderId": 1,
+      "id": 8
+    },
+    {
+      "title": "Lista zakupów",
+      "body": "\n1. Herbata,\n2. Ziemianki,\n 3. Woda gazowana\n",
+      "folderId": 1,
+      "id": 10
+    },
+    {
+      "title": "Kurs React - TODO",
+      "body": "\n1. Napisać odcinki\n2. Nargrać odcinki",
+      "folderId": 1,
+      "id": 15
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Tutaj wpisz treść swojej notatki.",
+      "folderId": 2,
+      "id": 17
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Coś sie zepsuło\n",
+      "folderId": 2,
+      "id": 18
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Tutaj wpisz treść swojej notatki.",
+      "folderId": 3,
+      "id": 19
+    },
+    {
+      "title": "czemu coś nie działa",
+      "body": "Treść notatki",
+      "folderId": 3,
+      "id": 20
+    },
+    {
       "title": "Nowa notatka",
       "body": "Treść notatki",
-      "folderId": 4,
-      "id": 1
+      "folderId": 2,
+      "id": 23
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Treść notatki",
+      "folderId": 2,
+      "id": 24
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Treść notatki",
+      "folderId": 3,
+      "id": 25
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Treść notatki",
+      "folderId": 3,
+      "id": 26
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Treść notatki",
+      "folderId": 2,
+      "id": 27
+    },
+    {
+      "title": "Nowa notatka",
+      "body": "Treść notatki",
+      "folderId": 1,
+      "id": 28
     }
   ]
 }
